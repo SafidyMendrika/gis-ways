@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/index.css">
+
+    <script src="./assets/js/xhr.js"></script>
+    <script src="./assets/js/index.js" defer=""></script>
+    <script src="./assets/js/async.js" defer=""></script>
+    <title>Lalana</title>
+</head>
+<body>
+    <header>
+        <h1>Lalana</h1>
+        <h2><a href="./controlPanel">Control panel +</a></h2>
+    </header>
+    <nav class="">
+        <div class="head"> <h2 class="head-text">More</h2>  </div>
+        <form action="" class="form">
+            <div class="section">
+                <div class="constDiv">
+                    <h2>construction detals</h2>
+                </div>
+                <div class="inputs">
+                <select name="way" >
+                        <option value="">all</option>
+                    {% for row in data %}
+                        <option value="{{ row.id }}">{{ row.name }}</option>
+                    {% endfor %}
+                </select>
+                <input name="radius" type="number">
+                    </div>
+            </div>
+            <div class="sub"><button type="submit"><p>search</p></button></div>
+        </form>
+    </nav>
+
+    <main class="map"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_498fe910f20bd4e9f76b3656e470af6d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+</head>
+<body>
+
+
+            <div class=&quot;folium-map&quot; id=&quot;map_498fe910f20bd4e9f76b3656e470af6d&quot; ></div>
+
+</body>
+<script>
+
+
+            var map_498fe910f20bd4e9f76b3656e470af6d = L.map(
+                &quot;map_498fe910f20bd4e9f76b3656e470af6d&quot;,
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+
+
+
+
+            var tile_layer_a601aa967d767806edb7a64528db090e = L.tileLayer(
+                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var circle_580b4f45d073e24ad5f3f1a6e7d08eee = L.circle(
+                [-18.895593, 47.563741],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 1000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var marker_dbdc1f01f540553be83d3eb24dfc27fe = L.marker(
+                [-18.895593, 47.563741],
+                {}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var icon_b9fdf605ef96fb8a821e2980ffb82485 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;hospital&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;fa&quot;}
+            );
+            marker_dbdc1f01f540553be83d3eb24dfc27fe.setIcon(icon_b9fdf605ef96fb8a821e2980ffb82485);
+
+
+        var popup_f2df16d84f21cfb8cb30a379d7f36356 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+
+
+                var html_779b714b51e3e281b2eebab06901f395 = $(`<div id=&quot;html_779b714b51e3e281b2eebab06901f395&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>hospital</div>`)[0];
+                popup_f2df16d84f21cfb8cb30a379d7f36356.setContent(html_779b714b51e3e281b2eebab06901f395);
+
+
+
+        marker_dbdc1f01f540553be83d3eb24dfc27fe.bindPopup(popup_f2df16d84f21cfb8cb30a379d7f36356)
+        ;
+
+
+
+
+            var circle_f01612a4f66351178742c24a7ff3a7e9 = L.circle(
+                [-18.905299, 47.524617],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;blue&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;blue&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 1000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var marker_7392d128b7ffde8842b104a8ebd2b928 = L.marker(
+                [-18.905299, 47.524617],
+                {}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var icon_6b342a0d4377b14e449d743affe401f5 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;school&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;fa&quot;}
+            );
+            marker_7392d128b7ffde8842b104a8ebd2b928.setIcon(icon_6b342a0d4377b14e449d743affe401f5);
+
+
+        var popup_8d67a94a0e27bb7bc0c1e6ad6a6db916 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+
+
+                var html_4682fe81ce9b2de7a8c57b4b83e43f67 = $(`<div id=&quot;html_4682fe81ce9b2de7a8c57b4b83e43f67&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>school</div>`)[0];
+                popup_8d67a94a0e27bb7bc0c1e6ad6a6db916.setContent(html_4682fe81ce9b2de7a8c57b4b83e43f67);
+
+
+
+        marker_7392d128b7ffde8842b104a8ebd2b928.bindPopup(popup_8d67a94a0e27bb7bc0c1e6ad6a6db916)
+        ;
+
+
+
+
+            var circle_506dbd72321e7b7ae620d796c7114de5 = L.circle(
+                [-18.906964, 47.524241],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 1000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var marker_9c25b96eb11d039d78b39b30aad7dabc = L.marker(
+                [-18.906964, 47.524241],
+                {}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var icon_1300260dcbc65cb6631adefd00e6013f = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;hotel&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;fa&quot;}
+            );
+            marker_9c25b96eb11d039d78b39b30aad7dabc.setIcon(icon_1300260dcbc65cb6631adefd00e6013f);
+
+
+        var popup_92abb1ca027f2e35a526f7306349da72 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+
+
+                var html_f75169b6fc2d45f05d32fc65c64c2ba4 = $(`<div id=&quot;html_f75169b6fc2d45f05d32fc65c64c2ba4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>hotel</div>`)[0];
+                popup_92abb1ca027f2e35a526f7306349da72.setContent(html_f75169b6fc2d45f05d32fc65c64c2ba4);
+
+
+
+        marker_9c25b96eb11d039d78b39b30aad7dabc.bindPopup(popup_92abb1ca027f2e35a526f7306349da72)
+        ;
+
+
+
+
+            var circle_df3438ee83a9351403af10c56ca1b3a6 = L.circle(
+                [-18.907856, 47.525306],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 1000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var marker_5c6ecec02bf8deaabf7cd505a07332fc = L.marker(
+                [-18.907856, 47.525306],
+                {}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var icon_e6259ebde5d954f98d2a396bd3d38339 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;hotel&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;fa&quot;}
+            );
+            marker_5c6ecec02bf8deaabf7cd505a07332fc.setIcon(icon_e6259ebde5d954f98d2a396bd3d38339);
+
+
+        var popup_ae4380a14b1cb3ad7d62a6c042b4ef42 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+
+
+                var html_ad1b80a9206499e4dc3cc14d5d947c8d = $(`<div id=&quot;html_ad1b80a9206499e4dc3cc14d5d947c8d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>hotel</div>`)[0];
+                popup_ae4380a14b1cb3ad7d62a6c042b4ef42.setContent(html_ad1b80a9206499e4dc3cc14d5d947c8d);
+
+
+
+        marker_5c6ecec02bf8deaabf7cd505a07332fc.bindPopup(popup_ae4380a14b1cb3ad7d62a6c042b4ef42)
+        ;
+
+
+
+
+            var circle_3b7f4f25f54b4d93a5ad54321738bdbb = L.circle(
+                [-18.908074, 47.525467],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: null, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: null, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 1000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var marker_9d034b2d7b9569ab3aed9dfa3eb6dd44 = L.marker(
+                [-18.908074, 47.525467],
+                {}
+            ).addTo(map_498fe910f20bd4e9f76b3656e470af6d);
+
+
+            var icon_d3c52bab9469897067ee5ca6ea1d9336 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;prescription&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;prefix&quot;: &quot;fa&quot;}
+            );
+            marker_9d034b2d7b9569ab3aed9dfa3eb6dd44.setIcon(icon_d3c52bab9469897067ee5ca6ea1d9336);
+
+
+        var popup_7b18203d1efa76ea4d4e41b3b2657da2 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+
+
+                var html_f8e14508e4d8cb9c867ea93aadb3f1ee = $(`<div id=&quot;html_f8e14508e4d8cb9c867ea93aadb3f1ee&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>pharmacy</div>`)[0];
+                popup_7b18203d1efa76ea4d4e41b3b2657da2.setContent(html_f8e14508e4d8cb9c867ea93aadb3f1ee);
+
+
+
+        marker_9d034b2d7b9569ab3aed9dfa3eb6dd44.bindPopup(popup_7b18203d1efa76ea4d4e41b3b2657da2)
+        ;
+
+
+
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div></main>
+
+</body>
+</html>

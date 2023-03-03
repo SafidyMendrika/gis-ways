@@ -1,0 +1,9 @@
+{% for row in data %}
+    <tr>
+        <td class="has-text-centered">{{ row.way.name }}</td>
+        <td class="has-text-centered" >{{ row.layerType.layerlabel }}</td>
+        <td class="has-text-centered" >{{ row.value }}</td>
+        <td class="has-text-centered" >{{ row.constParam[1] }} Ar</td>
+        <td class="has-text-centered" >{{ row.constParam[3] }} h</td>
+    </tr>
+{% endfor %}
