@@ -2,7 +2,7 @@
  
 > ### Application who find damaged ways in a **world map**
 > #### Techo : 
->               - **PYTHON**
+>               - ***PYTHON***
 >               - Flask
 >               - GIS 
 >               - BDD : postgreSQL
